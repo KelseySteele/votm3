@@ -1,0 +1,46 @@
+
+<!--jumbotron-->
+<div class="jumbotron">
+  <img src="../images/redCarpet.jpg" alt="red carpet">
+</div>
+
+<div class="container">
+<div ng-app= "checklistApp">
+<div ng-controller="checklistCtrl as cctrl">
+
+<div class= "col-md-2"></div>
+
+<div class= "col-md-8">
+<table class="tableText">
+  <h2>Checklist</h2>
+  <h4>Use our digital checklist on a smart phone, tablet, or laptop while on site or print out a pdf version.</h4>
+    <tr>
+      <th></th>
+      <th>Equipment</th>
+      <th>Details/Tips</th>
+    </tr>
+  <tr ng-repeat="item in cctrl.items">
+    <td>
+      <form>
+      <input type="checkbox">
+      </form>
+    </td>
+    <td>{{item.equipment}}</td>
+    <td>{{item.details }}</td>
+  </tr>
+</table>
+<div class= "printDiv">
+<button class="printButton">Print Checklist</button>
+</div>
+</div>
+
+<div class= "col-md-2"></div>
+
+</div>
+</div>
+</div>
+<script src="../js/controllers/checklistController.js"></script>
+
+
+</body>
+</html>
