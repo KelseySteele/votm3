@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('votm', ['ngSanitize']).controller('instructionsCtrl', [
+    angular.module('votm').controller('instructionsCtrl', [
 
      function () {
          var self = this;

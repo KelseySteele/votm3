@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('votm', ['ngRoute'])
+    angular.module('votm', ['ngRoute', 'ngSanitize'])
         .config(['$routeProvider', function ($routeProvider) {
 
             $routeProvider .when('/home', {
@@ -11,10 +11,13 @@
                 templateUrl: 'views/overview.html'
             })
             .when('/instructions', {
-                templateUrl: 'views/instructions.html'
+                templateUrl: 'views/instructions.html',
+                controller: 'instructionsCtrl',
+                controllerAs: 'ictrl'
             })
              .when('/faq', {
-                 templateUrl: 'views/faq.html'
+                 templateUrl: 'views/faq.html',
+                 controller: 'faqCtrl'
             })
             .when('/checklist', {
                  templateUrl: 'views/checklist.html'
