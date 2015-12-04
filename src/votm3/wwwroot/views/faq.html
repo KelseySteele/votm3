@@ -1,18 +1,20 @@
 
-<div class="faq-wrapper">
-    <!--jumbotron-->
-    <div class="jumbotron">
-        <img src="../images/cameraDrone.jpg" alt="camcorder">
-    </div>
-    <div class="container" ng-app="votm" ng-controller="faqCtrl">
+  <!--jumbotron-->
+<div class="jumbotron">
+    <!--<img src="../images/cameraDrone.jpg" alt="camcorder">-->
+    <img class="faqImage" src="../images/cameradrone.jpg" width="397" height="386" />
+</div>
+<div class="faq-wrapper"> 
+   
+    <div class="container" ng-app="votm" ng-controller="faqCtrl as fctrl">
         <h2>General FAQ</h2>
         <div class="row col-md-6">
             <!--accordion-->
-            <div class="panel-group" id="accordion-sample" ng-repeat="x in faq | filter: category.general | orderBy: number">
+            <div class="panel-group" id="accordion-sample" ng-repeat="x in fctrl.faq | filter: category.general | orderBy: number">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title text-white">
-                            <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-{{x.number}}">
+                            <a onclick="return false"; data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-{{x.number}}" >
                                 {{ x.question }}
                             </a>
                         </h4>

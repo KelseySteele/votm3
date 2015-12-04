@@ -47,12 +47,19 @@ table tr:nth-child(even) {
   padding: 0 20px;
 }
 
+.faq-wrapper{
+    margin-top: 20px;
+}
 /*-- Instructions Page ---*/
 
 .instRelative {
   position: relative;
 }
 
+.faqImage {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
 
 .instAbsolute {
   /*--Pop Up Window--*/

@@ -1,14 +1,28 @@
 ﻿(function () {
     'use strict';
+    var app = angular.module('votm', []);
 
-    angular.module('votm', ['ngRoute', 'ngSanitize'])
-        .config(['$routeProvider', function ($routeProvider) {
+    app.controller('PanelController', function () {
+        this.tab = 1;
+        this.setTab = function (setTab) {
+            this.tab = setTab;
+        };
+        this.isSelected = function (checkTab) {
+            return this.tab === checkTab;
+        };
+    })
+
+    //replaced this: angular.module('votm', ['ngRoute', 'ngSanitize']) with app
+
+        app.config(['$routeProvider', function ($routeProvider) {
 
             $routeProvider .when('/home', {
                 templateUrl: 'views/home.html'
             })
             .when('/overview', {
-                templateUrl: 'views/overview.html'
+                templateUrl: 'views/overview.html',
+                controller: 'PanelController',
+                controllerAs: 'panel'
             })
             .when('/instructions', {
                 templateUrl: 'views/instructions.html',
@@ -17,12 +31,18 @@
             })
              .when('/faq', {
                  templateUrl: 'views/faq.html',
-                 controller: 'faqCtrl'
-            })
+                 controller: 'faqCtrl',
+                 controllerAs:'fctrl'
+             })
             .when('/checklist', {
-                 templateUrl: 'views/checklist.html'
+                templateUrl: 'views/checklist.html',
+                controller: 'checklistCtrl',
+                controllerAs:'cctrl'
             })
             .otherwise({ redirectTo: '/home' });
 
         }]);
+
+   
+
 })();
