@@ -2,66 +2,38 @@
 <div class="jumbotron">
     <img src="../images/mountainFilming.jpg" alt="filming in the mountains" width="397" height="486">
 </div>
-<!--<div class="container">
-    <section ng-init = "tab =1">
-        <ul class="nav nav-pills">
-            <li ng-class="{ active: tab === 1}">
-                <a href ng-click="tab = 1">Introduction</a>
-            </li>
-            <li ng-class="{active: tab === 2 }">
-                <a href ng-click="tab = 2">Features</a>
-            </li>
-            <li ng-class="{active: tab === 3}">
-                <a href ng-click="tab = 3">Details</a>
-            </li>
-        </ul>
-    </section>
 
-    <div class="panel" ng-show="tab === 1">
-        <h4>Introduction-VazztCaster as a Turnkey System from KenCast</h4>
-        <p>We can customize the system for you</p>
-    </div>
-    <div class="panel" ng-show="tab === 2">
-        <h4>Features</h4>
-        <p>VazztCaster software captures video from a camera into an attached capture device (laptop or computer)</p>
-    </div>
-    <div class="panel" ng-show="tab === 3">
-        <h4>Details</h4>
-        <p>Detects available networks</p>
-    </div>-->
 
     <div class="container">
-    <section ng-controller="PanelController as panel">
-        <ul class="nav nav-pills">
-            <li ng-class="{ active: panel.isSelected(1)}">
-                <a href ng-click="panel.setTab(1)">Introduction</a>
+    <section ng-controller="overviewCtrl as octrl">
+        <ul class="nav nav-tabs">
+            <li ng-class="{ active: octrl.isSelected('introduction')}">
+                <a ng-click="octrl.selectTab('introduction')">Introduction</a>
             </li>
-            <li ng-class="{active: panel.isSelected(2)}">
-                <a href ng-click="panel.setTab(2)">Features</a>
+            <li ng-class="{active: octrl.isSelected('features')}">
+                <a ng-click="octrl.selectTab('features')">Features</a>
             </li>
-            <li ng-class="{active: panel.isSelected(3)}">
-                <a href ng-click="panel.setTab(3)">Details</a>
+            <li ng-class="{active: octrl.isSelected('details')}">
+                <a ng-click="octrl.selectTab('details')">Details</a>
             </li>
         </ul>
 
 
-        <div class="panel" ng-show="panel.isSelected(1)">
-            <h4>Introduction-VazztCaster as a Turnkey System from KenCast</h4>
-            <p>We can customize the system for you</p>
+        <div class="panel" ng-show="octrl.isSelected('introduction')">
+            <h4>Introduction</h4>
+            <div ng-include="octrl.overviewtemplate"></div>
         </div>
-        <div class="panel" ng-show="panel.isSelected(2)">
+        <div class="panel" ng-show="octrl.isSelected('features')">
             <h4>Features</h4>
-            <p>VazztCaster software captures video from a camera into an attached capture device (laptop or computer)</p>
+            <div ng-include="octrl.overviewtemplate"></div>  
         </div>
-        <div class="panel" ng-show="panel.isSelected(3)">
+        <div class="panel" ng-show="octrl.isSelected('details')">
             <h4>Details</h4>
-            <p>Detects available networks</p>
+            <div ng-include="octrl.overviewtemplate"></div>
         </div>
     </section>
 
     
 </div>
 
-      
-    <!--<script src="../../scripts/controllers/panel-controller.js"></script>-->
 

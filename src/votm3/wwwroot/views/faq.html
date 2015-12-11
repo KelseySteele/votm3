@@ -1,20 +1,80 @@
+﻿<div class='faq-wrapper'>
+    <!--jumbotron-->
+    <div class="jumbotron">
+        <img class="img-responsive" src="../images/cameraDrone.jpg" alt="camcorder">
+    </div>
+    <div class="container" ng-app="votm" ng-controller="faqCtrl as fctrl">
 
-  <!--jumbotron-->
-<div class="jumbotron">
-    <!--<img src="../images/cameraDrone.jpg" alt="camcorder">-->
+        <section>
+            <h2>FAQs</h2>
+            <p>Click on a tab below to see FAQs on a topic</p>
+            <ul class="nav nav-tabs">
+                <li ng-class="{ active: fctrl.isSelected('general') }">
+                    <a ng-click="fctrl.selectTab('general')">General</a>
+                </li>
+                <li ng-class="{ active: fctrl.isSelected('3g&4g') }">
+                    <a ng-click="fctrl.selectTab('3g&4g')">3G & 4G Networks</a>
+                </li>
+                <li ng-class="{ active: fctrl.isSelected('equipmentoptions') }">
+                    <a ng-click="fctrl.selectTab('equipmentoptions')">Equipment Options</a>
+                </li>
+                <li ng-class="{ active: fctrl.isSelected('usingequipment') }">
+                    <a ng-click="fctrl.selectTab('usingequipment')">Using Equipment</a>
+                </li>
+                <li ng-class="{ active: fctrl.isSelected('kencastservices') }">
+                    <a ng-click="fctrl.selectTab('kencastservices')">Kencast Services</a>
+                </li>
+                <li ng-class="{ active: fctrl.isSelected('miscellaneous') }">
+                    <a ng-click="fctrl.selectTab('miscellaneous')">Miscellaneous</a>
+                </li>
+            </ul>
+            <div class="panel" ng-show="fctrl.isSelected('general')">
+                <h4>General</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+            <div class="panel" ng-show="fctrl.isSelected('3g&4g')">
+                <h4>3G & 4G Networks</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+            <div class="panel" ng-show="fctrl.isSelected('equipmentoptions')">
+                <h4>Equipment Options</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+            <div class="panel" ng-show="fctrl.isSelected('usingequipment')">
+                <h4>Using Equipment</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+            <div class="panel" ng-show="fctrl.isSelected('kencastservices')">
+                <h4>Kencast Services</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+            <div class="panel" ng-show="fctrl.isSelected('miscellaneous')">
+                <h4>Miscellaneous</h4>
+                <div ng-include="fctrl.faqtemplate"></div>
+            </div>
+
+        </section>
+
+    </div> <!--End of container-->
+</div>
+
+
+  <!--<!--jumbotron
+<!--<div class="jumbotron">
+    <!--<img src="../images/cameraDrone.jpg" alt="camcorder">
     <img class="faqImage" src="../images/cameradrone.jpg" width="397" height="386" />
 </div>
-<div class="faq-wrapper"> 
-   
+<div class="faq-wrapper">
+
     <div class="container" ng-app="votm" ng-controller="faqCtrl as fctrl">
         <h2>General FAQ</h2>
         <div class="row col-md-6">
             <!--accordion-->
-            <div class="panel-group" id="accordion-sample" ng-repeat="x in fctrl.faq | filter: category.general | orderBy: number">
+            <!--<div class="panel-group" id="accordion-sample" ng-repeat="x in fctrl.faq | filter: category.general | orderBy: number">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title text-white">
-                            <a onclick="return false"; data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-{{x.number}}" >
+                            <a onclick="return false" ; data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-{{x.number}}">
                                 {{ x.question }}
                             </a>
                         </h4>
@@ -23,9 +83,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!--<div ng-bind-html="myHTML">
         </div>-->
-    </div>
+    <!--</div>
     <script src="../../scripts/controllers/faq-controller.js"></script>
-</div>
+</div>-->
