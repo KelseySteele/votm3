@@ -3,7 +3,6 @@
     <img src="../images/mountainFilming.jpg" alt="filming in the mountains" width="397" height="486">
 </div>
 
-
     <div class="container">
     <section ng-controller="overviewCtrl as octrl">
         <ul class="nav nav-tabs">
@@ -20,15 +19,12 @@
 
 
         <div class="panel" ng-show="octrl.isSelected('introduction')">
-            <h4>Introduction</h4>
             <div ng-include="octrl.overviewtemplate"></div>
         </div>
         <div class="panel" ng-show="octrl.isSelected('features')">
-            <h4>Features</h4>
             <div ng-include="octrl.overviewtemplate"></div>  
         </div>
         <div class="panel" ng-show="octrl.isSelected('details')">
-            <h4>Details</h4>
             <div ng-include="octrl.overviewtemplate"></div>
         </div>
     </section>

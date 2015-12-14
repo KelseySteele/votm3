@@ -5,17 +5,17 @@
       "number":"1",
       "description":"<p>Introduction-VazztCaster as a Turnkey System from KenCast<p>"
    },
-   {  
-      "category":"features",
-      "title":"Features",
-      "number":"2",
-      "description":"<p>VazztCaster software captures video from a camera into an attached capture device (laptop or computer)</p>"
-   },
-   {  
-      "category":"details",
-      "title":"Details",
-      "number":"3",
-      "description":"<p>Detects available networks</p>"
-   }
+  {
+    "category": "features",
+    "description": "<p>VazztCaster software captures video from a camera into an attached capture device (laptop or computer)</p>",
+    "number": "2",
+    "title": "Features"
+  },
+  {
+    "category": "details",
+    "description": "<p>Detects available networks</p>",
+    "number": "3",
+    "title": "Details"
+  }
 ]
 
