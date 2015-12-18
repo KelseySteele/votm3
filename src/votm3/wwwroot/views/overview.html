@@ -4,6 +4,7 @@
 </div>
 
     <div class="container">
+     <div ng-repeat="x in octrl.overviewdata | filter:{use: octrl.overviewcategory} | orderBy: number">
     <section ng-controller="overviewCtrl as octrl">
         <ul class="nav nav-tabs">
             <li ng-class="{ active: octrl.isSelected('introduction')}">

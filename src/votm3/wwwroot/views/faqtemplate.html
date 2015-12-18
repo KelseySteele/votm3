@@ -3,7 +3,7 @@
         <div class="col-sm-12 col-md-8">
             <!--Add this to accordion tag below if click to close: close-others="oneAtATime"-->
             <uib-accordion>
-                <uib-accordion-group ng-repeat="x in fctrl.faqs | filter:{category:fctrl.faqcategory} | orderBy: number" heading="{{x.question}}">
+                <uib-accordion-group ng-repeat="x in fctrl.faqdata | filter:{category:fctrl.faqcategory} | orderBy: number" heading="{{x.question}}">
                     <div ng-bind-html="x.answer"></div>
                 </uib-accordion-group>
             </uib-accordion>

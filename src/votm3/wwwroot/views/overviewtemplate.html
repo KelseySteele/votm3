@@ -1,12 +1,11 @@
 ﻿<div class="overviewpanel-wrapper">
     <div class="row">
         <div class="col-sm-12 col-md-8">
-            <!--Add this to accordion tag below if click to close: close-others="oneAtATime"-->
-            <uib-accordion>
-                <uib-accordion-group ng-repeat="x in octrl.overviewdata | filter:{category: octrl.overviewcategory} | orderBy: number" heading="{{x.title}}">
-                    <div ng-bind-html="x.description"></div>
-                </uib-accordion-group>
-            </uib-accordion>
+            <div ng-repeat="x in octrl.overviewdata | filter:{category: octrl.overviewcategory} | orderBy: number">
+                <h2>{{x.title}}</h2>
+                <img class="col-sm-12 col-md-4 panelImage" ng-src="{{x.image}}" ng-show="x.image"  alt="{{x.alt}}">
+                <div class="col-md-8" ng-bind-html="x.description"></div>
+            </div>
         </div>
     </div> <!--end of row-->
 </div>

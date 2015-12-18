@@ -61,6 +61,11 @@ table tr:nth-child(even) {
     max-height: 600px; /*slider height*/
 }
 
+/*-- Overview Page --*/
+.panelImage {
+    float: left;
+}
+
 .instAbsolute {
   /*--Pop Up Window--*/
   position: absolute;
