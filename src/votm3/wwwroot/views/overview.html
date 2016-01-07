@@ -4,33 +4,33 @@
 </div>
 
     <div class="container">
-     <div ng-repeat="x in octrl.overviewdata | filter:{use: octrl.overviewcategory} | orderBy: number">
-    <section ng-controller="overviewCtrl as octrl">
-        <ul class="nav nav-tabs">
-            <li ng-class="{ active: octrl.isSelected('introduction')}">
-                <a ng-click="octrl.selectTab('introduction')">Introduction</a>
-            </li>
-            <li ng-class="{active: octrl.isSelected('features')}">
-                <a ng-click="octrl.selectTab('features')">Features</a>
-            </li>
-            <li ng-class="{active: octrl.isSelected('details')}">
-                <a ng-click="octrl.selectTab('details')">Details</a>
-            </li>
-        </ul>
+        <section ng-controller="overviewCtrl as octrl">
+            <div ng-repeat="x in octrl.overviewdata | orderBy: number| filter:{category: octrl.overviewcategory} | filter:{use: octrl.overviewuse} |orderBy: number">
+                <ul class="nav nav-tabs">
+                    <li ng-class="{ active: octrl.isSelected('introduction')}">
+                        <a ng-click="octrl.selectTab('introduction')">Introduction</a>
+                    </li>
+                    <li ng-class="{active: octrl.isSelected('features')}">
+                        <a ng-click="octrl.selectTab('features')">Features</a>
+                    </li>
+                    <li ng-class="{active: octrl.isSelected('details')}">
+                        <a ng-click="octrl.selectTab('details')">Details</a>
+                    </li>
+                </ul>
 
 
-        <div class="panel" ng-show="octrl.isSelected('introduction')">
-            <div ng-include="octrl.overviewtemplate"></div>
-        </div>
-        <div class="panel" ng-show="octrl.isSelected('features')">
-            <div ng-include="octrl.overviewtemplate"></div>  
-        </div>
-        <div class="panel" ng-show="octrl.isSelected('details')">
-            <div ng-include="octrl.overviewtemplate"></div>
-        </div>
-    </section>
-
-    
+                <div class="panel" ng-show="octrl.isSelected('introduction')">
+                    <div ng-include="octrl.overviewtemplate"></div>
+                </div>
+                <div class="panel" ng-show="octrl.isSelected('features')">
+                    <div ng-include="octrl.overviewtemplate"></div>
+                </div>
+                <div class="panel" ng-show="octrl.isSelected('details')">
+                    <div ng-include="octrl.overviewtemplate"></div>
+                </div>
+            </div>
+        </section>    
 </div>
 
+ <!--<div ng-repeat="x in octrl.overviewdata | orderBy: number">-->
 
