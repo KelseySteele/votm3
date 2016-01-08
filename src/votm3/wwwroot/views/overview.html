@@ -5,7 +5,25 @@
 
     <div class="container">
         <section ng-controller="overviewCtrl as octrl">
-            <div ng-repeat="x in octrl.overviewdata | orderBy: number| filter:{category: octrl.overviewcategory} | filter:{use: octrl.overviewuse} |orderBy: number">
+            <div ng-repeat="x in octrl.overviewdata | orderBy: number| filter:{category: octrl.overviewcategory} | filter:{use: octrl.usetab} |orderBy: number">
+
+                <ul class="nav nav-tabs">
+                    <li ng-class="{ active: octrl.isSelectedUse('VazztCaster as a Turnkey System')}">
+                        <a ng-click="octrl.selectUseTab('VazztCaster as a Turnkey System')">VazztCaster as a Turnkey System</a>
+                    </li>
+                    <li ng-class="{active: octrl.isSelectedUse('VazztCaster as a Service')}">
+                        <a ng-click="octrl.selectUseTab('VazztCaster as a Service')">VazztCaster as a Service</a>
+                    </li>
+                </ul>
+
+                <div ng-show="octrl.isSelectedUse('VazztCaster as a Turnkey System')">
+                    <!--<div ng-include="octrl.overviewtemplate"></div>-->
+                </div>
+                <div ng-show="octrl.isSelectedUse('VazztCaster as a Service')">
+                   <!--<div ng-include="octrl.overviewtemplate"></div>-->
+                </div>
+
+
                 <ul class="nav nav-tabs">
                     <li ng-class="{ active: octrl.isSelected('introduction')}">
                         <a ng-click="octrl.selectTab('introduction')">Introduction</a>
