@@ -121,7 +121,10 @@ table tr:nth-child(even) {
     margin-top: 170px;
 }
 
-
+.use-nav-tabs {
+    background-color: #2196f3;
+    font: white;
+}
 
 /*-- Slideshow on homepage ---*/
 

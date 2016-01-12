@@ -7,7 +7,7 @@
         <section ng-controller="overviewCtrl as octrl">
             <div ng-repeat="x in octrl.overviewdata | orderBy: number| filter:{category: octrl.overviewcategory} | filter:{use: octrl.usetab} |orderBy: number">
 
-                <ul class="nav nav-tabs">
+                <ul class=" nav nav-pills">
                     <li ng-class="{ active: octrl.isSelectedUse('VazztCaster as a Turnkey System')}">
                         <a ng-click="octrl.selectUseTab('VazztCaster as a Turnkey System')">VazztCaster as a Turnkey System</a>
                     </li>
@@ -16,37 +16,38 @@
                     </li>
                 </ul>
 
-                <div ng-show="octrl.isSelectedUse('VazztCaster as a Turnkey System')">
-                    <!--<div ng-include="octrl.overviewtemplate"></div>-->
-                </div>
-                <div ng-show="octrl.isSelectedUse('VazztCaster as a Service')">
-                   <!--<div ng-include="octrl.overviewtemplate"></div>-->
-                </div>
+
+                    <div ng-show="octrl.isSelectedUse('VazztCaster as a Turnkey System')">
+                        <!--<div ng-include="octrl.overviewtemplate"></div>-->
+                    </div>
+                    <div ng-show="octrl.isSelectedUse('VazztCaster as a Service')">
+                        <!--<div ng-include="octrl.overviewtemplate"></div>-->
+                    </div>
 
 
-                <ul class="nav nav-tabs">
-                    <li ng-class="{ active: octrl.isSelected('introduction')}">
-                        <a ng-click="octrl.selectTab('introduction')">Introduction</a>
-                    </li>
-                    <li ng-class="{active: octrl.isSelected('features')}">
-                        <a ng-click="octrl.selectTab('features')">Features</a>
-                    </li>
-                    <li ng-class="{active: octrl.isSelected('details')}">
-                        <a ng-click="octrl.selectTab('details')">Details</a>
-                    </li>
-                </ul>
+                    <ul class="nav nav-tabs">
+                        <li ng-class="{ active: octrl.isSelected('introduction')}">
+                            <a ng-click="octrl.selectTab('introduction')">Introduction</a>
+                        </li>
+                        <li ng-class="{active: octrl.isSelected('features')}">
+                            <a ng-click="octrl.selectTab('features')">Features</a>
+                        </li>
+                        <li ng-class="{active: octrl.isSelected('details')}">
+                            <a ng-click="octrl.selectTab('details')">Details</a>
+                        </li>
+                    </ul>
 
 
-                <div class="panel" ng-show="octrl.isSelected('introduction')">
-                    <div ng-include="octrl.overviewtemplate"></div>
+                    <div class="panel" ng-show="octrl.isSelected('introduction')">
+                        <div ng-include="octrl.overviewtemplate"></div>
+                    </div>
+                    <div class="panel" ng-show="octrl.isSelected('features')">
+                        <div ng-include="octrl.overviewtemplate"></div>
+                    </div>
+                    <div class="panel" ng-show="octrl.isSelected('details')">
+                        <div ng-include="octrl.overviewtemplate"></div>
+                    </div>
                 </div>
-                <div class="panel" ng-show="octrl.isSelected('features')">
-                    <div ng-include="octrl.overviewtemplate"></div>
-                </div>
-                <div class="panel" ng-show="octrl.isSelected('details')">
-                    <div ng-include="octrl.overviewtemplate"></div>
-                </div>
-            </div>
         </section>    
 </div>
 

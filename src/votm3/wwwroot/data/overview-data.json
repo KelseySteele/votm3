@@ -27,21 +27,21 @@
       "category": "introduction",
       "title": "Introduction",
       "number": "1",
-      "description": "<p>The Vazzt VOTM Service System allows you to Capture live video in the field with a camera/camcorder and VazztCaster software on your computer/laptop, and broadcast (“pitch”) the video on bonded 3G/4G networks (1, 2, 3 or more will work) to your communications hub. </p><p> At the hub, the KenCast Enterprise Server software with the VazztHub software module on your server computers can receive (“catch”) the live feed from the VazztCaster and broadcast live to authorized users on your website, as well as record the live stream, and put it on your website for subsequent playback on demand from authorized users.</p><p> This product is ideal for broadcasting live events within the IT platform for a closed community or entity such as public safety agencies (Police departments, Fire departments, Military, and others).</p>",
-      "image": "images/overviewImages/cameraAndCar.jpg",
+      "description": "<p>The Vazzt VOTM System allows you to Capture live video in the field with a camera/camcorder and the VazztCaster program software on your computer/laptop), and broadcast (&ldquo;pitch&rdquo;) the video on bonded 3G/4G networks (1, 2, 3 or more will work) to The KenCast Vazzt.com hub.</p><p>At the hub, the KenCast Enterprise Server software in the Cloud can receive (&ldquo;catch&rdquo;) the live feed from one or many VazztCasters and output to your system, record it, and put it on your website for live viewing or&nbsp; for playback on demand from the recording.</p><p>This product is ideal for broadcasting live sporting events, musical concerts, theatre productions, cultural events, religious ceremonies, and more</p><p>You can also monetize your live event through use of our eCommerce feature.</p>",
+      "image": "images/overviewImages/cameraAndLaptop.jpg",
       "alt": "Car and Camera"
     },
     {
       "use":  "VazztCaster as a Service",
       "category": "features",
-      "description": "<ul><li>VazztCaster software captures video from a camera into an attached capture device (laptop or computer)</li><li>Optionally records (within the capture device) and encodes the video stream and/or encrypts (256 AES encryption) the stream</li> <li>Splits the video stream onto one or more wireless IP networks for transmission to the VazztHub</li><li> At the Hub, the server bonds the network feeds, decrypts the live stream, and optionally records the stream at the VazztHub</li> <li>Transmits the live video stream live to authorized users who access the Hub with an IP Video Player</li><li> Subsequently sends recorded content from the capture device to the VazztHub with accelerated delivery</li><li> Subsequently sends recorded content from the Hub as video streams to authorized users </li></ul>",
+      "description": "<ul><li>Usable on any wire or wireless networks that carry IP traffic</li><li>No hardware required</li><li>Playbacks on any user device</li><li>Switchable IP networks of the users&rsquo; choice</li></ul>",
       "number": "2",
       "title": "Features"
     },
     {
       "use": "VazztCaster as a Service",
       "category": "details",
-      "description": "<p>The VazztCaster Server&rsquo;s software program takes analog or digital input from your camera and encodes the video into an H.264 stream (compressed and fast format). In order to quickly establish a wire or wireless connection to the hub, VazztCaster automatically:</p><ul><li>Detects available networks automatically</li><li> Accelerates delivery on the networks it finds</li> <li>Bonds them Load balance the encoded video across the bonded networks Repair damage on the transmission as necessary</li><li> Encrypt the stream (256 AES encryption)</li> <li>VazztCaster also performs variable bitrate encoding (VBR) to ensure &ldquo;StayAlive&rdquo; delivery of the video stream even when the bandwidth drops substantially.</li> </ul>",
+      "description": "<p>The VazztCaster Server&rsquo;s software program takes analog or digital input from your camera and encodes the video into an H.264 stream (compressed and fast format). In order to quickly establish a wire or wireless connection to the hub, VazztCaster automatically:</p><ul><li>Detects available networks automatically</li><li>Accelerates delivery on the networks it finds</li><li>Bonds them</li><li>Load balance the encoded video across the bonded networks</li><li>Repair damage on the transmission as necessary</li><li>Encrypt the stream (256 AES encryption)</li><li>VazztCaster also performs variable bitrate encoding (VBR) to ensure &ldquo;StayAlive&rdquo; delivery of the video stream even when the bandwidth drops substantially.</li></ul>",
       "number": "3",
       "title": "Details"
     }

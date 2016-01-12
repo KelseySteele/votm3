@@ -4,7 +4,7 @@
             <!--<div ng-repeat="x in octrl.overviewdata| filter:{category: octrl.overviewcategory} | filter:{use: octrl.overviewuse} |orderBy: number"> Currently this filters for just VazztCaster as a turnkey system-->     
                     <h2>{{x.title}}</h2>
                     <h3>{{}}</h3>
-                    <img class="col-sm-12 col-md-4 panelImage" ng-src="{{x.image}}" ng-show="x.image" alt="{{x.alt}}">
+                    <img class="col-sm-12 col-md-4 panelImage img-responsive" ng-src="{{x.image}}" ng-show="x.image" alt="{{x.alt}}">
                     <div class="col-md-8" ng-bind-html="x.description"></div>
                 <!--</div>-->
         </div>
