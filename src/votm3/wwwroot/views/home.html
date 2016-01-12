@@ -5,7 +5,7 @@
 <div class="row" ng-controller="kascarouselController as kascarouselCtrl">
         <uib-carousel interval="4000" no-wrap="false">
             <uib-slide ng-repeat="slide in kascarouselCtrl.slides" active="slide.active">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <img ng-src="{{slide.image}}" style="margin:auto;" class="img-responsive" height="360px">
                 <div class="carousel-caption">
                     <h3>{{slide.text}}</h3>
                 </div>

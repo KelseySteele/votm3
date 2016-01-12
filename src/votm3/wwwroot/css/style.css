@@ -131,6 +131,7 @@ table tr:nth-child(even) {
 }
 .carousel .item img {
     width: 100%; /*img width*/
+    height: 360px; /*Kelsey added this*/
 }
 
 .jumbotron {
@@ -140,6 +141,7 @@ table tr:nth-child(even) {
 
 .jumbotron img{
     width: 100%; /*img width*/
+    height: 360px; /*Kelsey added this*/
 }
 
 /*full width container*/
