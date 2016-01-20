@@ -7,6 +7,12 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x
 	    grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	    grunt.initConfig({
+	        'gh-pages': {
+	            options: {
+                    base:'dist'
+	            },
+                src: ['**']
+	        },
 	        uglify: {
 	            my_target: {
 	                files: { 'wwwroot/app.js': ['Scripts/app.js', 'Scripts/**/*.js'] }
@@ -19,6 +25,7 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x
 	                tasks: ['uglify']
 	            }
 	        }
+
 	    });
 	
 	    grunt.registerTask('default', ['uglify', 'watch']);
